@@ -6,6 +6,7 @@ var forms = multer();
 
 var indexRouter = require("./routes/index");
 var productsRouter = require("./routes/products");
+var usersRouter = require("./routes/users");
 
 var app = express();
 
@@ -16,5 +17,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use("/", indexRouter);
 app.use("/api/v1/data", productsRouter);
+app.use("/api/v1/users", usersRouter);
 
 module.exports = app;
